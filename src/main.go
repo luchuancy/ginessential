@@ -10,6 +10,6 @@ func main() {
 	db := common.InitDB()
 	defer db.Close()
 	r := gin.Default()
-	router.ControlRouter(r)
+	r = router.ControlRouter(r)
 	panic(r.Run())
 }
